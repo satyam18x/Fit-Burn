@@ -76,30 +76,46 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Meet Your Coach */}
       <section className="section-padding dark-section">
-        <div className="container">
-          <div className="grid-2-cols">
-            <div>
-              <img src="https://images.financialexpressdigital.com/2025/06/chatgpt-gym-woman.jpg?w=1200" alt="Workout at home" style={{ width: '100%', borderRadius: 'var(--radius-card)', boxShadow: 'var(--shadow-subtle)' }} />
+        <div className="container" style={{ textAlign: 'center' }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 8vw, 2.8rem)', marginBottom: '3rem' }}>Meet Your Coach</h2>
+          <div className="grid-2-cols" style={{ alignItems: 'center', textAlign: 'left' }}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <img 
+                src="https://images.financialexpressdigital.com/2025/06/chatgpt-gym-woman.jpg?w=1200" 
+                alt="Meet your coach" 
+                style={{ 
+                  width: '100%', 
+                  maxWidth: '500px',
+                  height: 'auto',
+                  maxHeight: '400px',
+                  objectFit: 'cover',
+                  objectPosition: 'top',
+                  borderRadius: 'var(--radius-card)', 
+                  boxShadow: 'var(--shadow-subtle)' 
+                }} 
+              />
             </div>
-            <div>
-              <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>Why Choose Burn IT Out?</h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="coach-content">
+              <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Hi, I'm your Head Trainer!</h3>
+              <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: '1.8', color: 'rgba(255,255,255,0.9)' }}>
+                I know exactly what it feels like to struggle with consistency and fad diets. My mission is to show you that a sustainable, healthy lifestyle is completely achievable from your living room.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
                 {[
-                  "No expensive gym memberships required",
-                  "Beginner-friendly scaling for all levels",
-                  "Designed specifically for busy moms and professionals",
-                  "A proven transformation system backed by real results"
+                  "Certified Fitness & Nutrition Expert",
+                  "Specialized in Women's Home Workouts",
+                  "Postpartum Core & Recovery Specialist"
                 ].map((text, i) => (
-                  <div key={i} className="check-item" style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                    <CheckCircle2 size={24} color="var(--color-primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                    <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.9)' }}>{text}</p>
+                  <div key={i} style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                    <CheckCircle2 size={24} color="var(--color-primary)" style={{ flexShrink: 0 }} />
+                    <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.9)' }}>{text}</p>
                   </div>
                 ))}
               </div>
-              <div style={{ marginTop: '3rem' }}>
-                <Link to="/about" className="btn btn-primary">Learn More About Us</Link>
+              <div>
+                <Link to="/about" className="btn btn-primary" style={{ width: '100%', maxWidth: 'max-content' }}>Read My Full Story</Link>
               </div>
             </div>
           </div>
