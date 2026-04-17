@@ -6,8 +6,8 @@ const Contact = () => {
     <div>
       <section className="section-padding dark-section text-center" style={{ minHeight: '30vh', display: 'flex', alignItems: 'center' }}>
         <div className="container">
-          <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Get in Touch</h1>
-          <p style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.2rem', color: 'rgba(255,255,255,0.8)' }}>
+          <h1 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)', marginBottom: '1rem' }}>Get in Touch</h1>
+          <p style={{ maxWidth: '600px', margin: '0 auto', fontSize: 'clamp(1rem, 4vw, 1.2rem)', color: 'rgba(255,255,255,0.8)' }}>
             Have questions about our programs or need support? We're here to help.
           </p>
         </div>
@@ -15,10 +15,10 @@ const Contact = () => {
 
       <section className="section-padding">
         <div className="container">
-          <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
+          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(2rem, 5vw, 4rem)' }}>
             
             {/* Contact Form */}
-            <div className="card" style={{ padding: '2.5rem' }}>
+            <div className="card" style={{ padding: 'clamp(1.5rem, 5vw, 2.5rem)' }}>
               <h2 style={{ marginBottom: '2rem' }}>Send Us a Message</h2>
               <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <div>
