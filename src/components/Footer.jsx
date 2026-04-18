@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Flame } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
+import logoImg from '../assets/logo.jpeg';
 
 const Footer = () => {
   return (
@@ -8,9 +9,9 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-col">
-            <Link to="/" className="logo" style={{ color: 'white', marginBottom: '1rem', display: 'inline-flex' }}>
-              <Flame size={24} color="#C2185B" />
-              Burn <span style={{ color: '#C2185B' }}>IT Out</span>
+            <Link to="/" className="logo" style={{ color: 'white', marginBottom: '1rem', display: 'inline-flex', alignItems: 'center' }}>
+              <img src={logoImg} alt="Burn It Out Logo" style={{ height: '40px', objectFit: 'contain', marginRight: '0.5rem', borderRadius: '50%' }} />
+              Burn It <span style={{ color: 'var(--color-primary)', marginLeft: '0.25rem' }}>Out Fitness</span>
             </Link>
             <p style={{ color: '#a0a0a0', marginTop: '1rem' }}>
               Personalized fitness programs designed for real women with real goals. Start your transformation today.

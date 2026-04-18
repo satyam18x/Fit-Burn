@@ -4,6 +4,7 @@ import { Flame, PlayCircle, Star, CheckCircle2, Heart, Apple } from 'lucide-reac
 import ProgramCard from '../components/ProgramCard';
 import TestimonialCard from '../components/TestimonialCard';
 import fitnessVideo from '../assets/fitness.mp4';
+import transformImg from '../assets/transform.jpeg';
 
 const Home = () => {
   return (
@@ -35,16 +36,16 @@ const Home = () => {
       <div className="trust-bar">
         <div className="container">
           <div className="trust-bar-track">
-            <div className="trust-item"><Star size={18} color="#C2185B" fill="#C2185B"/> 1000+ Women Transformed</div>
-            <div className="trust-item"><Flame size={18} color="#C2185B"/> 100% Home-Based</div>
-            <div className="trust-item"><Heart size={18} color="#C2185B"/> Beginner Friendly</div>
-            <div className="trust-item"><Apple size={18} color="#C2185B"/> Includes Nutrition Plans</div>
+            <div className="trust-item"><Star size={18} color="var(--color-primary)" fill="var(--color-primary)"/> 1000+ Women Transformed</div>
+            <div className="trust-item"><Flame size={18} color="var(--color-primary)"/> 100% Home-Based</div>
+            <div className="trust-item"><Heart size={18} color="var(--color-primary)"/> Beginner Friendly</div>
+            <div className="trust-item"><Apple size={18} color="var(--color-primary)"/> Includes Nutrition Plans</div>
             
             {/* Duplicates for seamless mobile marquee scrolling */}
-            <div className="trust-item mobile-only"><Star size={18} color="#C2185B" fill="#C2185B"/> 1000+ Women Transformed</div>
-            <div className="trust-item mobile-only"><Flame size={18} color="#C2185B"/> 100% Home-Based</div>
-            <div className="trust-item mobile-only"><Heart size={18} color="#C2185B"/> Beginner Friendly</div>
-            <div className="trust-item mobile-only"><Apple size={18} color="#C2185B"/> Includes Nutrition Plans</div>
+            <div className="trust-item mobile-only"><Star size={18} color="var(--color-primary)" fill="var(--color-primary)"/> 1000+ Women Transformed</div>
+            <div className="trust-item mobile-only"><Flame size={18} color="var(--color-primary)"/> 100% Home-Based</div>
+            <div className="trust-item mobile-only"><Heart size={18} color="var(--color-primary)"/> Beginner Friendly</div>
+            <div className="trust-item mobile-only"><Apple size={18} color="var(--color-primary)"/> Includes Nutrition Plans</div>
           </div>
         </div>
       </div>
@@ -54,7 +55,7 @@ const Home = () => {
         <div className="container">
           <div className="text-center" style={{ marginBottom: '3rem' }}>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>What We Offer</h2>
-            <p style={{ color: '#2D0A1E', maxWidth: '600px', margin: '0 auto' }}>Programs tailored exclusively for women, focusing on sustainable results without stepping foot in a gym.</p>
+            <p style={{ color: 'var(--color-text)', maxWidth: '600px', margin: '0 auto' }}>Programs tailored exclusively for women, focusing on sustainable results without stepping foot in a gym.</p>
           </div>
           
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
@@ -69,7 +70,7 @@ const Home = () => {
                   {item.icon}
                 </div>
                 <h3 style={{ marginBottom: '1rem' }}>{item.title}</h3>
-                <p style={{ color: '#2D0A1E', fontSize: '0.9rem' }}>{item.desc}</p>
+                <p style={{ color: 'var(--color-text)', fontSize: '0.9rem' }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -83,8 +84,8 @@ const Home = () => {
           <div className="grid-2-cols" style={{ alignItems: 'center', textAlign: 'left' }}>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <img 
-                src="https://images.financialexpressdigital.com/2025/06/chatgpt-gym-woman.jpg?w=1200" 
-                alt="Meet your coach" 
+                src={transformImg} 
+                alt="Transformation" 
                 style={{ 
                   width: '100%', 
                   maxWidth: '500px',
@@ -127,7 +128,7 @@ const Home = () => {
         <div className="container">
           <div className="text-center" style={{ marginBottom: '3rem' }}>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Start Your Transformation</h2>
-            <p style={{ color: '#2D0A1E', maxWidth: '600px', margin: '0 auto' }}>Join thousands of women who have changed their lives with these programs.</p>
+            <p style={{ color: 'var(--color-text)', maxWidth: '600px', margin: '0 auto' }}>Join thousands of women who have changed their lives with these programs.</p>
           </div>
           
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Flame, Menu, X } from 'lucide-react';
-
+import logoImg from '../assets/logo.jpeg';
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
@@ -18,10 +18,10 @@ const Header = () => {
     <header>
       <div className="container" style={{ position: 'relative' }}>
         <Link to="/" className="logo">
-          <Flame size={28} color="#C2185B" />
-          Burn <span>IT Out</span>
+          <img src={logoImg} alt="Burn It Out Logo" style={{ height: '64px', objectFit: 'contain' }} />
+          Burn IT Out<span>  Fitness</span>
         </Link>
-        
+
         {/* Desktop Nav */}
         <nav className="nav-links desktop-only">
           <Link to="/" className={isActive('/')}>Home</Link>
@@ -31,7 +31,7 @@ const Header = () => {
           <Link to="/blog" className={isActive('/blog')}>Blog</Link>
           <Link to="/contact" className={isActive('/contact')}>Contact</Link>
         </nav>
-        
+
         <div className="nav-actions desktop-only">
           <Link to="/login" className="login-link">Login</Link>
           <Link to="/programs" className="btn btn-primary">View Programs</Link>

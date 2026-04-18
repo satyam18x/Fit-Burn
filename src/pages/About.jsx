@@ -1,4 +1,5 @@
 import React from 'react';
+import coachImg from '../assets/coach.jpg';
 
 const About = () => {
   return (
@@ -24,7 +25,7 @@ const About = () => {
             </div>
             <div className="card" style={{ padding: '2.5rem', textAlign: 'center', background: 'var(--color-dark)', color: 'white' }}>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'white' }}>Our Vision</h3>
-              <p style={{ color: '#F8BBD0' }}>To become the global leading home-fitness platform that redefines what it means to be a strong, confident woman in the modern era.</p>
+              <p style={{ color: 'rgba(255, 255, 255, 0.7)' }}>To become the global leading home-fitness platform that redefines what it means to be a strong, confident woman in the modern era.</p>
             </div>
             <div className="card" style={{ padding: '2.5rem', textAlign: 'center', background: 'var(--color-primary)', color: 'white' }}>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'white' }}>Core Values</h3>
@@ -37,14 +38,14 @@ const About = () => {
       {/* Founder Profile */}
       <section className="section-padding">
         <div className="container">
-          <div className="card" style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', padding: 'clamp(1.5rem, 5vw, 3rem)', backgroundColor: '#F8BBD0', alignItems: 'center' }}>
+          <div className="card" style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', padding: 'clamp(1.5rem, 5vw, 3rem)', backgroundColor: 'var(--color-white)', alignItems: 'center' }}>
             <div style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center' }}>
-              <img src="https://img.freepik.com/free-photo/beautiful-sportive-girl-posing-with-crossed-arms-dark-wall_176420-620.jpg?semt=ais_hybrid&w=740&q=80" alt="Founder" style={{ width: '100%', maxWidth: '400px', borderRadius: '12px', boxShadow: 'var(--shadow-subtle)' }} />
+              <img src={coachImg} alt="Founder - Tuhina Chakraborty" style={{ width: '100%', maxWidth: '400px', borderRadius: '12px', boxShadow: 'var(--shadow-subtle)', objectFit: 'cover' }} />
             </div>
             <div style={{ flex: '2 1 300px' }}>
               <h4 style={{ color: 'var(--color-primary)', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.9rem', marginBottom: '0.5rem' }}>Meet Your Coach</h4>
-              <h2 style={{ fontSize: 'clamp(2rem, 6vw, 2.5rem)', marginBottom: '1rem' }}>Sarah Jenkins</h2>
-              <p style={{ fontSize: '1.1rem', color: '#2D0A1E', marginBottom: '1.5rem' }}>
+              <h2 style={{ fontSize: 'clamp(2rem, 6vw, 2.5rem)', marginBottom: '1rem' }}>Tuhina Chakraborty</h2>
+              <p style={{ fontSize: '1.1rem', color: 'var(--color-text)', marginBottom: '1.5rem' }}>
                 With over a decade of experience in women's fitness and postpartum rehabilitation, Sarah founded Burn IT Out to bridge the gap between rigorous gym expectations and the reality of busy women.
               </p>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '2rem' }}>

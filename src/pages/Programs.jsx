@@ -35,7 +35,7 @@ const Programs = () => {
       description: "A comprehensive weight loss journey combining steady cardio, strength work, and strict nutrition.",
       includes: ["Full body routines", "Macro-counted meal plans", "Weekly weigh-ins", "Trainer access"],
       price: "₹1,999",
-      image: "https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=600&q=80"
+      image: "https://cdn.prod.website-files.com/670657a27b5f7c81337bec48/6883ac9fecd54067b741f39d_Copy%20of%20WEGLOW_2025_SARAHELLENTREACHER-001976-2.jpeg"
     },
     {
       id: 3,
