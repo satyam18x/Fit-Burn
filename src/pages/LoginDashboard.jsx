@@ -42,7 +42,7 @@ const LoginDashboard = () => {
     <div style={{ backgroundColor: '#FFF0F5', minHeight: '100vh' }}>
       {/* Dashboard Top bar */}
       <div style={{ backgroundColor: 'var(--color-dark)', color: 'white', padding: '1rem 0' }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div className="container dashboard-header-flex">
           <h2 style={{ fontSize: '1.5rem', color: 'white' }}>Welcome back, Jessica!</h2>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
             <span style={{ fontSize: '0.9rem', opacity: 0.8 }}>21-Day Fat Burn Challenge</span>
@@ -52,15 +52,15 @@ const LoginDashboard = () => {
       </div>
 
       <div className="container section-padding">
-        <div className="grid" style={{ gridTemplateColumns: '2.5fr 1fr', gap: '2rem' }}>
+        <div className="dashboard-grid">
           
           {/* Main Content Area */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             
             {/* Today's Workout */}
             <div className="card" style={{ padding: '2rem' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><PlayCircle color="var(--color-primary)" /> Today's Workout: Full Body HIIT</h3>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: 'clamp(1.1rem, 4vw, 1.5rem)' }}><PlayCircle color="var(--color-primary)" /> Today's Workout: Full Body HIIT</h3>
                 <span style={{ background: 'var(--color-accent)', color: 'var(--color-primary)', padding: '4px 12px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 'bold' }}>Week 2 - Day 3</span>
               </div>
               <div style={{ width: '100%', paddingTop: '56.25%', backgroundColor: '#2D0A1E', position: 'relative', borderRadius: '8px', overflow: 'hidden' }}>
@@ -88,7 +88,7 @@ const LoginDashboard = () => {
                   { day: 'Day 4', label: 'Active Recovery / Stretch', completed: false },
                   { day: 'Day 5', label: 'Cardio Burn', completed: false },
                 ].map((mod, i) => (
-                  <li key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', background: mod.active ? 'var(--color-accent)' : '#F8BBD0', border: '1px solid #F48FB1', borderRadius: '8px', alignItems: 'center' }}>
+                  <li key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', background: mod.active ? 'var(--color-accent)' : '#F8BBD0', border: '1px solid #F48FB1', borderRadius: '8px', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
                     <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                       <span style={{ fontWeight: 'bold', width: '50px' }}>{mod.day}</span>
                       <span>{mod.label}</span>
