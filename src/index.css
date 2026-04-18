@@ -59,9 +59,15 @@ ul {
 /* UI Utilities */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 6rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
 }
 
 .section-padding {
@@ -372,6 +378,54 @@ footer {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.hero-main-flex {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  max-width: 1400px !important;
+}
+
+.hero-logo-side {
+  flex: 1.2;
+}
+
+.hero-logo-img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+}
+
+.hero-text-side {
+  flex: 1;
+}
+
+@media (max-width: 868px) {
+  .hero {
+    min-height: calc(100svh - 80px);
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .hero-main-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-logo-img {
+    max-width: min(60vw, 320px);
+  }
+
+  .hero-text-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -459,10 +513,6 @@ footer {
 
   .grid-2-cols .check-item {
     text-align: left;
-  }
-
-  .hero {
-    text-align: center;
   }
 
   .hero-buttons {

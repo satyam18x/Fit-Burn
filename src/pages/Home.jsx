@@ -5,6 +5,7 @@ import ProgramCard from '../components/ProgramCard';
 import TestimonialCard from '../components/TestimonialCard';
 import fitnessVideo from '../assets/fitness.mp4';
 import transformImg from '../assets/transform.jpeg';
+import logoPng from '../assets/logopng.png';
 
 const Home = () => {
   return (
@@ -20,14 +21,19 @@ const Home = () => {
         >
           <source src={fitnessVideo} type="video/mp4" />
         </video>
-        <div className="container hero-content">
-          <h1>Burn IT Out Fitness <br /><span style={{ color: 'var(--color-primary)' }}>Your Transformation Starts at Home</span></h1>
-          <p>Personalized fitness programs designed for real women with real goals. No gym required.</p>
-          <div className="hero-buttons">
-            <Link to="/programs" className="btn btn-primary">Start Your Journey</Link>
-            <Link to="/programs" className="btn btn-outline" style={{ display: 'flex', gap: '0.5rem' }}>
-              <PlayCircle size={20} /> View Programs
-            </Link>
+        <div className="container hero-content hero-main-flex">
+          <div className="hero-logo-side">
+            <img src={logoPng} alt="Burn IT Out Logo" className="hero-logo-img" />
+          </div>
+          <div className="hero-text-side">
+            <h1>Burn IT Out Fitness <br /><span style={{ color: 'var(--color-primary)' }}>Your Transformation Starts at Home</span></h1>
+            <p>Personalized fitness programs designed for real women with real goals. No gym required.</p>
+            <div className="hero-buttons">
+              <Link to="/programs" className="btn btn-primary">Start Your Journey</Link>
+              <Link to="/programs" className="btn btn-outline" style={{ display: 'flex', gap: '0.5rem' }}>
+                <PlayCircle size={20} /> View Programs
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -54,7 +60,7 @@ const Home = () => {
       <section className="section-padding">
         <div className="container">
           <div className="text-center" style={{ marginBottom: '3rem' }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>What We Offer</h2>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 6vw, 2.5rem)', marginBottom: '1rem' }}>What We Offer</h2>
             <p style={{ color: 'var(--color-text)', maxWidth: '600px', margin: '0 auto' }}>Programs tailored exclusively for women, focusing on sustainable results without stepping foot in a gym.</p>
           </div>
 
@@ -127,7 +133,7 @@ const Home = () => {
       <section className="section-padding" style={{ backgroundColor: 'var(--color-light)' }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: '3rem' }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Start Your Transformation</h2>
+            <h2 style={{ fontSize: 'clamp(1.8rem, 6vw, 2.5rem)', marginBottom: '1rem' }}>Start Your Transformation</h2>
             <p style={{ color: 'var(--color-text)', maxWidth: '600px', margin: '0 auto' }}>Join thousands of women who have changed their lives with these programs.</p>
           </div>
 

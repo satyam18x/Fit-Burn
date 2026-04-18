@@ -31,7 +31,7 @@ const SuccessStories = () => {
     <div>
       <section className="section-padding dark-section text-center">
         <div className="container">
-          <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Real Women. Real Results.</h1>
+          <h1 style={{ fontSize: 'clamp(2rem, 10vw, 3rem)', marginBottom: '1rem' }}>Real Women. Real Results.</h1>
           <p style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.2rem', color: 'rgba(255,255,255,0.8)' }}>
             Don't just take our word for it. Look at the incredible transformations our community has achieved from home.
           </p>
@@ -52,7 +52,7 @@ const SuccessStories = () => {
       {/* Video Testimonials */}
       <section className="section-padding">
         <div className="container">
-          <h2 className="text-center" style={{ fontSize: '2.5rem', marginBottom: '3rem' }}>Hear It From Them</h2>
+          <h2 className="text-center" style={{ fontSize: 'clamp(1.8rem, 8vw, 2.5rem)', marginBottom: '3rem' }}>Hear It From Them</h2>
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
             {[1, 2, 3].map((_, idx) => (
               <div key={idx} className="card" style={{ position: 'relative', paddingTop: '100%', cursor: 'pointer', overflow: 'hidden' }}>
