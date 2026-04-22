@@ -6,8 +6,19 @@ import TestimonialCard from '../components/TestimonialCard';
 import fitnessVideo from '../assets/fitness.mp4';
 import transformImg from '../assets/transform.jpeg';
 import logoPng from '../assets/logopng.png';
+import { useEffect } from 'react';
 
 const Home = () => {
+  useEffect(() => {
+  const script = document.createElement('script');
+  script.src = 'https://www.instagram.com/embed.js';
+  script.async = true;
+  document.body.appendChild(script);
+
+  return () => {
+    document.body.removeChild(script);
+  };
+}, []);
   return (
     <div>
       {/* Hero Section */}
@@ -128,7 +139,81 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Instagram Feed */}
+<section className="section-padding" style={{ backgroundColor: 'var(--color-light)' }}>
+  <div className="container">
+    <div className="text-center" style={{ marginBottom: '2.5rem' }}>
+      <h2 style={{ fontSize: 'clamp(1.8rem, 6vw, 2.5rem)', marginBottom: '1rem' }}>Follow Along on Instagram</h2>
+      <p style={{ color: 'var(--color-text)', maxWidth: '600px', margin: '0 auto' }}>
+        Daily motivation, workout tips, and real transformations — follow the journey.
+      </p>
+    </div>
 
+    <div style={{ display: 'flex', justifyContent: 'center', gap: '4.5rem', flexWrap: 'wrap' }}>
+      <blockquote
+        className="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/reel/DTLGm9bgQG6/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
+        data-instgrm-version="14"
+        style={{
+          background: '#FFF',
+          border: '0',
+          borderRadius: '3px',
+          boxShadow: '0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)',
+          margin: '1px',
+          maxWidth: '340px',
+          width: '100%',
+          minWidth: '280px',
+        }}
+      ></blockquote>
+       <blockquote
+        className="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/reel/DW6aMSkSOBL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        data-instgrm-version="14"
+        style={{
+          background: '#FFF',
+          border: '0',
+          borderRadius: '3px',
+          boxShadow: '0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)',
+          margin: '1px',
+          maxWidth: '340px',
+          width: '100%',
+          minWidth: '280px',
+        }}
+      ></blockquote>
+       <blockquote
+        className="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/reel/DXRhsLmDFLq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        data-instgrm-version="14"
+        style={{
+          background: '#FFF',
+          border: '0',
+          borderRadius: '3px',
+          boxShadow: '0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)',
+          margin: '1px',
+          maxWidth: '340px',
+          width: '100%',
+          minWidth: '280px',
+        }}
+        //https://www.instagram.com/reel/DXRhsLmDFLq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
+      ></blockquote>
+    </div>
+
+    <div className="text-center" style={{ marginTop: '2rem' }}>
+      <a
+        href="https://www.instagram.com/burnitoutfitness?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==E"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn btn-outline"
+        style={{ border: '2px solid var(--color-dark)', color: 'var(--color-dark)', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+        Follow on Instagram
+      </a>
+    </div>
+  </div>
+</section>   
       {/* Popular Programs */}
       <section className="section-padding" style={{ backgroundColor: 'var(--color-light)' }}>
         <div className="container">
